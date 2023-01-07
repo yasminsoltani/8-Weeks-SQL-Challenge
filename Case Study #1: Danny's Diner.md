@@ -9,7 +9,7 @@ Danny wants to use the data to answer a few simple questions about his customers
 
 Danny has provided you 3 different datasets for this case study:
 
-#### Table 1: sales
+#### Table 1: sales 
 
 | column        | type       |    
 | ------------- | ---------- |
@@ -17,7 +17,7 @@ Danny has provided you 3 different datasets for this case study:
 | order_date    | DATE       |
 | product_id    | INTEGER    |
 
-#### Table 2: menu
+#### Table 2: menu 
 
 | column       | type       |    
 | ------------ | ---------- |
