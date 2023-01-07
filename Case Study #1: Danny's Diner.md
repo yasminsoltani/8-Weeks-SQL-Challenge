@@ -2,6 +2,7 @@
 
 ![danny's diner](https://user-images.githubusercontent.com/103854541/211166454-6af0b127-e0d5-4c20-af2c-6acf223a5f7a.png)
 
+give it a try from [here](https://8weeksqlchallenge.com/case-study-1/)
 
 ## Business Task
 
