@@ -36,7 +36,13 @@ Danny has provided you 3 different datasets for this case study:
 ## Case Study Questions
 
 #### 1. What is the total amount each customer spent at the restaurant?
-
+```
+SELECT customer_id, sum(price) as tot_amount_spent
+FROM menu m
+INNER JOIN sales s
+ON s.product_id = m.product_id
+GROUP BY customer_id
+```
 
 #### 2. How many days has each customer visited the restaurant?
 
