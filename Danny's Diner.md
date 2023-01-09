@@ -33,6 +33,7 @@ Danny has provided you 3 different datasets for this case study:
 | customer_id   | VARCHAR(l) |
 | join_date     | TIMESTAMP  |
 
+## Case Study Questions
 
 #### 1. What is the total amount each customer spent at the restaurant?
 
