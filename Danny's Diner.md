@@ -35,6 +35,7 @@ Danny has provided you 3 different datasets for this case study:
 
 ## Case Study Questions
 
+
 #### 1. What is the total amount each customer spent at the restaurant?
 
 ```sql
@@ -52,6 +53,7 @@ GROUP BY customer_id
 | B           | 74                |
 | C           | 36                |
 
+
 #### 2. How many days has each customer visited the restaurant?
 ```sql
 SELECT customer_id, COUNT(DISTINCT order_date) AS times_visited
@@ -65,6 +67,7 @@ GROUP BY customer_id
 | A           | 4              |
 | B           | 6              |
 | C           | 2              |
+
 
 #### 3. What was the first item from the menu purchased by each customer?
 
@@ -139,9 +142,62 @@ where rnk = 1
 
 #### 6. Which item was purchased first by the customer after they became a member?
 
+```sql
+WITH cte_1 AS 
+(
+   SELECT s.customer_id, m.join_date, s.order_date, s.product_id,
+      DENSE_RANK() OVER(PARTITION BY s.customer_id ORDER BY s.order_date) AS rank
+   FROM sales AS s
+   JOIN members AS m
+      ON s.customer_id = m.customer_id
+   WHERE s.order_date >= m.join_date
+)
+
+SELECT s.customer_id, s.order_date, m2.product_name 
+FROM cte_1 AS s
+JOIN menu AS m2
+   ON s.product_id = m2.product_id
+   group by s.customer_id, s.order_date, m2.product_name, rank
+HAVING rank = 1
+```
+
+##### Asnwer:
+
+| customer_id | order_date  | product_name |   
+| ----------- | ----------- | ------------ |
+| A           | 2021-01-07  | curry        |
+| B           | 2021-01-11  | sushi        |
 
 
 #### 7. Which item was purchased just before the customer became a member?
+
+```sql
+WITH cte_1 AS 
+(
+   SELECT s.customer_id, m.join_date, s.order_date, s.product_id,
+      DENSE_RANK() OVER(PARTITION BY s.customer_id ORDER BY s.order_date desc) AS rank
+   FROM sales AS s
+   JOIN members AS m
+      ON s.customer_id = m.customer_id
+   WHERE s.order_date < m.join_date
+)
+
+SELECT s.customer_id, s.order_date, m2.product_name 
+FROM cte_1 AS s
+JOIN menu AS m2
+   ON s.product_id = m2.product_id
+   group by s.customer_id, s.order_date, m2.product_name, rank
+HAVING rank = 1
+
+```
+
+##### Asnwer:
+
+| customer_id | order_date  | product_name |   
+| ----------- | ----------- | ------------ |
+| A           | 2021-01-01  | curry        |
+| A           | 2021-01-01  | sushi        |
+| B           | 2021-01-04  | sushi        |
 
 
 #### 8. What is the total items and amount spent for each member before they became a member?
