@@ -60,11 +60,11 @@ GROUP BY customer_id
 ```
 ##### Asnwer:
 
-| customer_id | times_visited     |    
-| ----------- | ----------------- |
-| A           | 4                 |
-| B           | 6                 |
-| C           | 2                 |
+| customer_id | times_visited  |    
+| ----------- | -------------- |
+| A           | 4              |
+| B           | 6              |
+| C           | 2              |
 
 #### 3. What was the first item from the menu purchased by each customer?
 
@@ -85,12 +85,12 @@ where rnk = 1
 
 ##### Asnwer:
 
-| customer_id | product_name      |    
-| ----------- | ----------------- |
-| A           | curry             |
-| A           | sushi             |
-| B           | curry             |
-| C           | ramen             |
+| customer_id | product_name   |    
+| ----------- | -------------- |
+| A           | curry          |
+| A           | sushi          |
+| B           | curry          |
+| C           | ramen          |
 
 
 #### 4. What is the most purchased item on the menu and how many times was it purchased by all customers?
@@ -105,16 +105,40 @@ order by times_it_was_purchased desc
 ```
 ##### Asnwer:
 
-| product_name | times_it_was_purchased   |    
-| ------------ | ------------------------ |
-| ramen        | 8                        |
+| product_name | times_it_was_purchased |    
+| ------------ | ---------------------- |
+| ramen        | 8                      |
 
 
 
 #### 5. Which item was the most popular for each customer?
+```sql 
+with cte_1 as
+(SELECT s.customer_id, m.product_name, count(s.product_id) as order_count,
+RANK() OVER(PARTITION BY s.customer_id order by count(s.product_id) desc) as rnk
+from sales s
+inner join menu m
+on s.product_id = m.product_id
+group by product_name, customer_id
+)
+select customer_id, product_name, order_count
+from cte_1
+where rnk = 1
+```
+
+##### Asnwer:
+
+| customer_id | product_name    | order_count |   
+| ----------- | --------------- | ----------- |
+| A           | ramen           | 3           |
+| B           | curry           | 2           |
+| B           | ramen           | 2           |
+| B           | sushi           | 2           |
+| C           | ramen           | 3           |
 
 
 #### 6. Which item was purchased first by the customer after they became a member?
+
 
 
 #### 7. Which item was purchased just before the customer became a member?
