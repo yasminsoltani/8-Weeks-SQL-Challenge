@@ -1,6 +1,6 @@
 # 🍽 Case Study #1 - Danny's Diner
 
-![image](https://user-images.githubusercontent.com/103854541/211897806-7d6491d1-ee7a-4a19-8ac1-8018dab8ec26.png)
+![image](https://user-images.githubusercontent.com/103854541/211897806-7d6491d1-ee7a-4a19-8ac1-8018dab8ec26.png = 250X250)
 
 
 give it a try from [here](https://8weeksqlchallenge.com/case-study-1/)
