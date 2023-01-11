@@ -36,7 +36,7 @@ Danny has provided you 3 different datasets for this case study:
 ## Case Study Questions
 
 #### 1. What is the total amount each customer spent at the restaurant?
-```
+```sql
 SELECT customer_id, sum(price) as tot_amount_spent
 FROM menu m
 INNER JOIN sales s
