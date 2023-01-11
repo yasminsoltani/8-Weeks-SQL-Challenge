@@ -203,6 +203,24 @@ HAVING rank = 1
 
 #### 8. What is the total items and amount spent for each member before they became a member?
 
+```sql
+select distinct s.customer_id, count(distinct(s.product_id)) as total_items, sum(m.price) as total_amount_spent
+from sales s
+inner join menu m
+on s.product_id = m.product_id
+inner join members me
+on s.customer_id = me.customer_id
+where s.order_date < me.join_date
+group by s.customer_id
+```
+
+##### Asnwer:
+
+| customer_id | total_items | total_amount_spent |   
+| ----------- | ----------- | ------------------ |
+| A           | 2           | 25                 |
+| B           | 2           | 40                 |
+
 
 #### 9. If each $1 spent equates to 10 points and sushi has a 2x points multiplier - how many points would each customer have?
 
