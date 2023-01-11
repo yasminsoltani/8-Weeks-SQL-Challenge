@@ -43,6 +43,13 @@ INNER JOIN sales s
 ON s.product_id = m.product_id
 GROUP BY customer_id
 ```
+##### Asnwer:
+
+| customer_id | tot_amount_spent  |    
+| ----------- | ----------------- |
+| A           | 76                |
+| B           | 74                |
+| C           | 36                |
 
 #### 2. How many days has each customer visited the restaurant?
 
