@@ -1,6 +1,6 @@
 # 🍽 Case Study #1 - Danny's Diner
 
-![danny's diner](https://user-images.githubusercontent.com/103854541/211166454-6af0b127-e0d5-4c20-af2c-6acf223a5f7a.png)
+![danny's diner]([https://user-images.githubusercontent.com/103854541/211166454-6af0b127-e0d5-4c20-af2c-6acf223a5f7a.png)](https://user-images.githubusercontent.com/81607668/127727503-9d9e7a25-93cb-4f95-8bd0-20b87cb4b459.png)
 
 give it a try from [here](https://8weeksqlchallenge.com/case-study-1/)
 
