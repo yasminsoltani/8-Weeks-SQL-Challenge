@@ -1,7 +1,6 @@
 # 🍽 Case Study #1 - Danny's Diner
 
-![image](https://user-images.githubusercontent.com/103854541/211898185-3a092c9c-8f45-4554-bae4-aff2680629b9.png | width=100)
-
+replace ![image](https://user-images.githubusercontent.com/103854541/211899169-ff412900-ec3d-45d2-b375-4660632c6ef1.png) with <img src="https://user-images.githubusercontent.com/103854541/211899169-ff412900-ec3d-45d2-b375-4660632c6ef1.png" width="100" height="100">
 
 
 give it a try from [here](https://8weeksqlchallenge.com/case-study-1/)
