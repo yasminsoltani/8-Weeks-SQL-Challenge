@@ -36,6 +36,7 @@ Danny has provided you 3 different datasets for this case study:
 ## Case Study Questions
 
 #### 1. What is the total amount each customer spent at the restaurant?
+
 ```sql
 SELECT customer_id, sum(price) as tot_amount_spent
 FROM menu m
@@ -52,12 +53,62 @@ GROUP BY customer_id
 | C           | 36                |
 
 #### 2. How many days has each customer visited the restaurant?
+```sql
+SELECT customer_id, COUNT(DISTINCT order_date) AS times_visited
+FROM sales
+GROUP BY customer_id
+```
+##### Asnwer:
 
+| customer_id | times_visited     |    
+| ----------- | ----------------- |
+| A           | 4                 |
+| B           | 6                 |
+| C           | 2                 |
 
 #### 3. What was the first item from the menu purchased by each customer?
 
+```sql
+with rank_cte as
+(
+SELECT customer_id, product_name, order_date, 
+DENSE_RANK() over(PARTITION BY customer_id order by order_date) as rnk
+from sales s
+inner join menu m
+on s.product_id = m.product_id
+group by customer_id, product_name, order_date
+)
+SELECT customer_id, product_name
+from rank_cte
+where rnk = 1
+```
+
+##### Asnwer:
+
+| customer_id | product_name      |    
+| ----------- | ----------------- |
+| A           | curry             |
+| A           | sushi             |
+| B           | curry             |
+| C           | ramen             |
+
 
 #### 4. What is the most purchased item on the menu and how many times was it purchased by all customers?
+
+```sql
+SELECT TOP 1 product_name, count(s.product_id) as times_it_was_purchased
+from sales s
+inner join menu m
+on s.product_id = m.product_id
+group by product_name
+order by times_it_was_purchased desc
+```
+##### Asnwer:
+
+| product_name | times_it_was_purchased   |    
+| ------------ | ------------------------ |
+| ramen        | 8                        |
+
 
 
 #### 5. Which item was the most popular for each customer?
