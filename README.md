@@ -6,7 +6,7 @@ Link to the Challenge is [here](https://8weeksqlchallenge.com/)
 
 ## 📚 Table of contents 
 
-● [Case Study #1: Danny's Diner](https://github.com/yasminsoltani/8-Weeks-SQL-Challenge/blob/main/Danny's%20Diner.md)
+● [Case Study #1: Danny's Diner](https://github.com/yasminsoltani/8-Weeks-SQL-Challenge/blob/main/Danny's%20Diner/Danny's%20Diner.md)
 
 ● [Case Study #2: Pizza Runner]
 
