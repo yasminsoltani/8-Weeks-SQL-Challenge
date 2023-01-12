@@ -3,7 +3,7 @@
 <img src="https://user-images.githubusercontent.com/103854541/211899169-ff412900-ec3d-45d2-b375-4660632c6ef1.png" width="500" height="500">
 
 
-give it a try from [here](https://8weeksqlchallenge.com/case-study-1/)
+give it a try from [here](https://8weeksqlchallenge.com/case-study-1/) or view my raw SQL solution [here](https://github.com/yasminsoltani/8-Weeks-SQL-Challenge/blob/main/8%20WEEKS%20SQL%20CHALLENGE%20-%20CASE%201.sql)
 
 ## Business Task
 
