@@ -1,11 +1,11 @@
 --1. What is the total amount each customer spent at the restaurant?
-
+```sql
 SELECT customer_id, sum(price) as tot_amount_spent
 FROM menu m
 INNER JOIN sales s
 ON s.product_id = m.product_id
 GROUP BY customer_id
-
+```
 --2. How many days has each customer visited the restaurant?
 
 SELECT customer_id, COUNT(DISTINCT order_date) AS times_visited
