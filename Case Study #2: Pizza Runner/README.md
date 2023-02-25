@@ -101,7 +101,7 @@ This is how our final ```#runner_orders``` table looks like
 
 Now that our tables are cleaned and ready to use, we can start working to the different questions!
 
-### Case Study Questions: 
+### 📌 Case Study Questions: 
 
 #### A: Pizza Metrics
 
