@@ -8,7 +8,7 @@ Link to the Challenge is [here](https://8weeksqlchallenge.com/)
 
 ● [Case Study #1: Danny's Diner](https://github.com/yasminsoltani/8-Weeks-SQL-Challenge/blob/main/Case%20Study%20%231:%20Danny's%20Diner/Danny's%20Diner.md)
 
-● [Case Study #2: Pizza Runner]
+● [Case Study #2: Pizza Runner](https://github.com/yasminsoltani/8-Weeks-SQL-Challenge/tree/main/Case%20Study%20%232:%20Pizza%20Runner)
 
 ● [Case Study #3: Foodie - Fi]
 
