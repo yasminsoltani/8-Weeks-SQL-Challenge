@@ -1,4 +1,4 @@
-# 🍕 Case Study #2 - Pizza Metrics
+# 🍕 Case Study #2 - Pizza Runner
 
 <img src="https://user-images.githubusercontent.com/103854541/221377608-4845b975-912e-426c-b39f-394d10332dcf.png" width="500" height="500">
 
