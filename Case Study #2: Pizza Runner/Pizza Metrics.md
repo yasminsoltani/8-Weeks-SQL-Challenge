@@ -198,4 +198,4 @@ group by FORMAT(DATEADD(DAY, 2, order_time),'dddd')
 | Sunday	| 1 |
 
 
-#### THE END :)
+#### For solution B. Runner and Customer Experience click [here] 
