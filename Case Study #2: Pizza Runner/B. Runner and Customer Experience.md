@@ -154,4 +154,3 @@ GROUP BY runner_id
 | 3	| 50
 
 
-#### For solution C. Ingredients Optimization [here] 
