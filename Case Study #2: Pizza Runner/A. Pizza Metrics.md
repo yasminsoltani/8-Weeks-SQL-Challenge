@@ -198,4 +198,4 @@ group by FORMAT(DATEADD(DAY, 2, order_time),'dddd')
 | Sunday	| 1 |
 
 
-#### For solution B. Runner and Customer Experience click [here] 
+#### For solution B. Runner and Customer Experience click [here](https://github.com/yasminsoltani/8-Weeks-SQL-Challenge/blob/main/Case%20Study%20%232:%20Pizza%20Runner/B.%20Runner%20and%20Customer%20Experience.md) 
