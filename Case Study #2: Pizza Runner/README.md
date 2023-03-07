@@ -128,7 +128,7 @@ view my solution to ```Pizza Metrics``` [here](https://github.com/yasminsoltani/
 6. What was the average speed for each runner for each delivery and do you notice any trend for these values?
 7. What is the successful delivery percentage for each runner?
 
-view my solution to ```Runner and Customer Experience``` [here]
+view my solution to ```Runner and Customer Experience``` [here](https://github.com/yasminsoltani/8-Weeks-SQL-Challenge/blob/main/Case%20Study%20%232:%20Pizza%20Runner/B.%20Runner%20and%20Customer%20Experience.md)
 
 #### C: Ingredient Optimisation
 
