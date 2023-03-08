@@ -116,7 +116,7 @@ Now that our tables are cleaned and ready to use, we can start working to the di
 9. What was the total volume of pizzas ordered for each hour of the day?
 10. What was the volume of orders for each day of the week?
 
-view my solution to ```Pizza Metrics``` [here](https://github.com/yasminsoltani/8-Weeks-SQL-Challenge/blob/main/Case%20Study%20%232:%20Pizza%20Runner/Pizza%20Metrics.md)
+view my solution to ```Pizza Metrics``` [here](https://github.com/yasminsoltani/8-Weeks-SQL-Challenge/blob/main/Case%20Study%20%232:%20Pizza%20Runner/A.%20Pizza%20Metrics.md)
 
 #### B: Runner and Customer Experience
 
